@@ -8,45 +8,38 @@ const Education = () => {
     certificacionesTitulo: "Cursos y Certificaciones",
     educacion: [
       {
-        titulo: "Ingeniería en Sistemas",
-        institucion: "Universidad Tecnológica",
-        periodo: "2019 - 2023",
-        ubicacion: "Ciudad, País",
-        descripcion: "Especialización en desarrollo de software y sistemas de información. Proyectos destacados en desarrollo web y bases de datos."
+        titulo: "Ingeniería en Software",
+        institucion: "Universidad Técnica de Ambato",
+        periodo: "2020 - actualidad",
+        ubicacion: "Ambato, Ecuador",
+        descripcion: "Los ingenieros de software se especializan en el diseño y el desarrollo de aplicaciones software, y están formados principalmente en matemáticas y Ciencias Computacionales; y los conocimientos y habilidades adquiridas a partir de esta formación los aplican en el diseño, construcción y despliegue de esas aplicaciones."
       },
-      {
-        titulo: "Técnico en Programación",
-        institucion: "Instituto Técnico Superior",
-        periodo: "2017 - 2019",
-        ubicacion: "Ciudad, País",
-        descripcion: "Fundamentos de programación, algoritmos y estructuras de datos. Introducción al desarrollo web."
-      }
     ],
     certificaciones: [
       {
-        titulo: "React Developer Certification",
-        emisor: "Meta",
+        titulo: "JavaScript Essentials 1",
+        emisor: "Cisco",
+        fecha: "2025",
+        credencial: "a1f485df-2c20-4960-9458-0103b59d76e1"
+      },
+      {
+        titulo: "Curso Gratuito Hacking ético Gamificado HACKLAB",
+        emisor: "Hacker Mentor",
         fecha: "2023",
-        credencial: "ABC123XYZ"
+        credencial: "49da87a8-6376-47b9-a1dd-6d61c3664ef8"
       },
       {
-        titulo: "JavaScript Algorithms and Data Structures",
-        emisor: "freeCodeCamp",
+        titulo: "Programming Essentials in Python",
+        emisor: "Universidad Técnica de Ambato",
         fecha: "2023",
-        credencial: "DEF456ABC"
+        credencial: ""
       },
       {
-        titulo: "Full Stack Web Development",
-        emisor: "The Odin Project",
+        titulo: "Conference on Computer Science, Electronics and Industrial Engineering",
+        emisor: "Universidad Técnica de Ambato",
         fecha: "2022",
-        credencial: "GHI789DEF"
+        credencial: ""
       },
-      {
-        titulo: "Git and GitHub Essential Training",
-        emisor: "LinkedIn Learning",
-        fecha: "2022",
-        credencial: "JKL012GHI"
-      }
     ]
   };
 
