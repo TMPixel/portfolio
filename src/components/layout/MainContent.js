@@ -3,7 +3,7 @@ import About from '../sections/About';
 import Education from '../sections/Education';
 import Skills from '../sections/Skills';
 import Portfolio from '../sections/Portfolio';
-// import Contact from '../sections/Contact';
+import Contact from '../sections/Contact';
 
 const MainContent = ({ seccionActiva, modoOscuro }) => {
   
@@ -17,8 +17,8 @@ const MainContent = ({ seccionActiva, modoOscuro }) => {
         return <Skills />;
       case 'portafolio':
         return <Portfolio />;
-    //   case 'contacto':
-    //     return <Contact />;
+      case 'contacto':
+        return <Contact />;
       default:
         return <About />;
     }
