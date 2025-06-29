@@ -5,17 +5,15 @@ const About = () => {
   
   const textos = {
     titulo: "Un poco sobre mí",
-    descripcion: "¡Hola! Soy un desarrollador web apasionado por crear experiencias digitales increíbles. Me encanta transformar ideas en código y siempre estoy buscando nuevos desafíos que me permitan crecer profesionalmente.",
+    descripcion: "¡Hola! Soy una desarrolladora web que busca crear experiencias digitales increíbles. Me inspira aprender de otros, razón por la que valoro el trabajo en equipo, especialmente porque se contribuye por un objetivo en común.",
     parrafo1: "Con experiencia en desarrollo frontend y backend, disfruto trabajando con tecnologías modernas y manteniéndome actualizado con las últimas tendencias del desarrollo web.",
-    parrafo2: "Cuando no estoy programando, me gusta explorar nuevas tecnologías, contribuir a proyectos de código abierto y compartir conocimientos con la comunidad de desarrolladores.",
     interesesTitulo: "Intereses Personales",
     intereses: [
-      { icon: FaGamepad, titulo: "Gaming", descripcion: "Disfruto de videojuegos, especialmente aquellos con buena narrativa y mecánicas innovadoras." },
-      { icon: FaMusic, titulo: "Música", descripcion: "La música me inspira mientras programo. Desde rock hasta electrónica." },
-      { icon: FaCamera, titulo: "Fotografía", descripcion: "Capturar momentos únicos y jugar con la composición visual." },
-      { icon: FaBook, titulo: "Lectura", descripcion: "Libros técnicos, ciencia ficción y desarrollo personal." },
-      { icon: FaPlane, titulo: "Viajes", descripcion: "Conocer nuevas culturas y encontrar inspiración en diferentes lugares." },
-      { icon: FaHeart, titulo: "Voluntariado", descripcion: "Contribuir con la comunidad y enseñar programación a otros." }
+      { icon: FaGamepad, titulo: "Gaming", descripcion: "Disfruto de videojuegos, desde indies hasta grandes hits." },
+      { icon: FaMusic, titulo: "Música", descripcion: "La música es mi más valorada compañía, puedo escuchar de todo, siempre y cuando la letra o el ritmo me transmita algo." },
+      { icon: FaCamera, titulo: "Fotografía", descripcion: "Capturar momentos únicos y editarlos de diversos modos y estilos es uno de mis hobbies favoritos." },
+      { icon: FaBook, titulo: "Lectura", descripcion: "Los libros siempre son un gran acompañante, ya sea para aprender algo nuevo o para despejarse de la realidad." },
+      { icon: FaPlane, titulo: "Viajes", descripcion: "Es un pasatiempo que quisiera realizar más seguido, hay mucho por descubrir fuera de visual studio." },
     ]
   };
 
