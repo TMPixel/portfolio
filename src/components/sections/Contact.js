@@ -7,7 +7,7 @@ import {
   FaInstagram,
   FaPaperPlane,
   FaUser,
-  FaSubject
+  FaFileAlt
 } from 'react-icons/fa';
 
 const Contact = () => {
@@ -32,16 +32,15 @@ const Contact = () => {
       mensaje: "Tu Mensaje",
       enviar: "Enviar Mensaje",
       enviando: "Enviando...",
-      enviado: "¡Mensaje Enviado!"
+      enviado: "¡Mensaje Enviado! Pronto obtendrás una respuesta."
     },
     info: {
       titulo: "Información de Contacto",
-      email: "tu.email@ejemplo.com",
-      ubicacion: "Ciudad, País",
+      email: "tamiaofv@gmail.com",
       disponible: "Disponible para proyectos"
     },
     redes: {
-      titulo: "Sígueme en Redes"
+      titulo: "También puedes encontrarme en..."
     }
   };
 
@@ -54,28 +53,16 @@ const Contact = () => {
     },
     {
       nombre: "LinkedIn",
-      url: "https://linkedin.com/in/tu-perfil",
+      url: "https://www.linkedin.com/in/tamia-maliza-a05aa7346/",
       icon: FaLinkedin,
       color: "from-blue-600 to-blue-800"
     },
     {
       nombre: "GitHub",
-      url: "https://github.com/tu-usuario",
+      url: "https://github.com/TMPixel/",
       icon: FaGithub,
       color: "from-gray-700 to-gray-900"
     },
-    {
-      nombre: "Twitter",
-      url: "https://twitter.com/tu-usuario",
-      icon: FaTwitter,
-      color: "from-blue-400 to-blue-600"
-    },
-    {
-      nombre: "Instagram",
-      url: "https://instagram.com/tu-usuario",
-      icon: FaInstagram,
-      color: "from-pink-500 to-purple-600"
-    }
   ];
 
   const handleChange = (e) => {
@@ -89,13 +76,11 @@ const Contact = () => {
     e.preventDefault();
     setEnviando(true);
     
-    // Simular envío (aquí integrarías EmailJS u otro servicio)
     setTimeout(() => {
       setEnviando(false);
       setEnviado(true);
       setFormData({ nombre: '', email: '', asunto: '', mensaje: '' });
       
-      // Resetear estado después de 3 segundos
       setTimeout(() => {
         setEnviado(false);
       }, 3000);
@@ -131,7 +116,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
-                  placeholder="Juan Pérez"
+                  placeholder="Ramiro García"
                 />
               </div>
 
@@ -148,14 +133,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
-                  placeholder="juan@ejemplo.com"
+                  placeholder="correo@ejemplo.com"
                 />
               </div>
 
               {/* Asunto */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  <FaSubject className="inline mr-2" />
+                  <FaFileAlt  className="inline mr-2" />
                   {textos.formulario.asunto}
                 </label>
                 <input
@@ -165,7 +150,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
-                  placeholder="Propuesta de Proyecto"
+                  placeholder="Propuesta/Idea de Proyecto"
                 />
               </div>
 
@@ -181,7 +166,7 @@ const Contact = () => {
                   required
                   rows={6}
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors resize-none"
-                  placeholder="Cuéntame sobre tu proyecto..."
+                  placeholder="Detalles sobre el proyecto..."
                 />
               </div>
 
@@ -258,7 +243,7 @@ const Contact = () => {
                 {textos.redes.titulo}
               </h3>
               
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-2">
                 {redesSociales.map((red, index) => {
                   const IconComponent = red.icon;
                   return (
