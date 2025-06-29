@@ -6,12 +6,12 @@ import './App.css';
 const textos = {
   sidebar: {
     nombre: "Mimi",
-    titulo: "Desarrollador Web",
+    titulo: "Desarrolladora Web",
     menu: {
       sobreMi: "Sobre Mí",
       educacion: "Educación", 
       habilidades: "Habilidades",
-      portafolio: "Portafolio",
+      portafolio: "Proyectos",
       contacto: "Contacto"
     }
   }

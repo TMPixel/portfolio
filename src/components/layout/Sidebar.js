@@ -30,7 +30,7 @@ const Sidebar = ({
   ];
 
   return (
-    <div className="w-80 bg-white dark:bg-gray-800 shadow-lg flex flex-col transition-colors duration-300">
+    <div className="w-80 h-screen fixed top-0 left-0 bg-white dark:bg-gray-800 shadow-lg flex flex-col transition-colors duration-300">
       {/* Header del Sidebar */}
       <div className="p-8 text-center border-b border-gray-200 dark:border-gray-700">
         {/* Foto de Perfil - Placeholder por ahora */}
