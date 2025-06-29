@@ -6,21 +6,20 @@ import {
   FaCss3Alt, 
   FaNode, 
   FaPython, 
-  FaGitAlt, 
-  FaDatabase,
-  FaServer,
-  FaMobile
+  FaGitAlt,
+  FaAngular, 
 } from 'react-icons/fa';
+import { GrGithub } from 'react-icons/gr';
 import { 
   SiTypescript, 
   SiTailwindcss, 
   SiMongodb, 
   SiPostgresql, 
-  SiExpress,
-  SiNextdotjs,
   SiFirebase,
-  SiVercel
+  SiVercel,
+  SiPostman
 } from 'react-icons/si';
+import { TbSql } from 'react-icons/tb';
 
 const Skills = () => {
   
@@ -36,29 +35,30 @@ const Skills = () => {
 
   const habilidades = {
     frontend: [
-      { nombre: "React", icon: FaReact, nivel: 90, color: "from-blue-400 to-cyan-400" },
-      { nombre: "JavaScript", icon: FaJs, nivel: 95, color: "from-yellow-400 to-yellow-600" },
-      { nombre: "TypeScript", icon: SiTypescript, nivel: 85, color: "from-blue-600 to-blue-800" },
-      { nombre: "HTML5", icon: FaHtml5, nivel: 95, color: "from-orange-500 to-red-500" },
-      { nombre: "CSS3", icon: FaCss3Alt, nivel: 90, color: "from-blue-500 to-blue-700" },
-      { nombre: "Tailwind CSS", icon: SiTailwindcss, nivel: 88, color: "from-teal-400 to-teal-600" },
-      { nombre: "Next.js", icon: SiNextdotjs, nivel: 80, color: "from-gray-800 to-black" }
+      { nombre: "HTML5", icon: FaHtml5, nivel: 90, color: "from-orange-500 to-red-500" },
+      { nombre: "JavaScript", icon: FaJs, nivel: 75, color: "from-yellow-400 to-yellow-600" },
+      { nombre: "CSS3", icon: FaCss3Alt, nivel: 70, color: "from-blue-500 to-blue-700" },
+      { nombre: "TypeScript", icon: SiTypescript, nivel: 65, color: "from-blue-600 to-blue-800" },
+      { nombre: "Tailwind CSS", icon: SiTailwindcss, nivel: 40, color: "from-teal-400 to-teal-600" },
+      { nombre: "Angular", icon: FaAngular, nivel: 50, color: "from-red-400 to-purple-500" },
+      { nombre: "React", icon: FaReact, nivel: 30, color: "from-blue-400 to-cyan-400" },
     ],
     backend: [
-      { nombre: "Node.js", icon: FaNode, nivel: 85, color: "from-green-500 to-green-700" },
-      { nombre: "Express", icon: SiExpress, nivel: 80, color: "from-gray-600 to-gray-800" },
-      { nombre: "Python", icon: FaPython, nivel: 75, color: "from-blue-500 to-yellow-500" },
-      { nombre: "API REST", icon: FaServer, nivel: 85, color: "from-purple-500 to-purple-700" }
+      { nombre: "Node.js", icon: FaNode, nivel: 55, color: "from-green-500 to-green-700" },
+      { nombre: "Python", icon: FaPython, nivel: 65, color: "from-blue-500 to-yellow-500" },
+      // { nombre: "API REST", icon: FaServer, nivel: 75, color: "from-purple-500 to-purple-700" }
     ],
     database: [
-      { nombre: "MongoDB", icon: SiMongodb, nivel: 82, color: "from-green-600 to-green-800" },
-      { nombre: "PostgreSQL", icon: SiPostgresql, nivel: 78, color: "from-blue-700 to-blue-900" },
-      { nombre: "Firebase", icon: SiFirebase, nivel: 80, color: "from-yellow-500 to-orange-500" }
+      { nombre: "SQL", icon: TbSql, nivel: 70, color: "from-blue-400 to-green-900" },
+      { nombre: "Firebase", icon: SiFirebase, nivel: 60, color: "from-yellow-500 to-orange-500" },
+      { nombre: "MongoDB", icon: SiMongodb, nivel: 50, color: "from-green-600 to-green-800" },
+      { nombre: "PostgreSQL", icon: SiPostgresql, nivel: 40, color: "from-blue-700 to-blue-900" },
     ],
     tools: [
-      { nombre: "Git", icon: FaGitAlt, nivel: 90, color: "from-orange-600 to-red-600" },
-      { nombre: "Vercel", icon: SiVercel, nivel: 85, color: "from-gray-800 to-black" },
-      { nombre: "Responsive Design", icon: FaMobile, nivel: 92, color: "from-pink-500 to-purple-500" }
+      { nombre: "Git", icon: FaGitAlt, nivel: 80, color: "from-orange-600 to-red-600" },
+      { nombre: "GitLab", icon: GrGithub, nivel: 40, color: "from-purple-500 to-black-200" },
+      { nombre: "Vercel", icon: SiVercel, nivel: 55, color: "from-gray-800 to-black" },
+      { nombre: "PostMan", icon: SiPostman, nivel: 70, color: "from-orange-500 to-yellow-200" },
     ]
   };
 
