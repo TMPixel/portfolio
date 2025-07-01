@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaFilter } from 'react-icons/fa';
 
 const Portfolio = () => {
-  
   const [filtroActivo, setFiltroActivo] = useState('todos');
   
   const textos = {
     titulo: "Mis Proyectos",
     filtros: {
       todos: "Todos",
-      react: "React",
       fullstack: "Full Stack",
-      frontend: "Frontend"
+      frontend: "Frontend",
+      backend: "Backend"
     },
     botones: {
       github: "Ver Código",
@@ -22,67 +21,47 @@ const Portfolio = () => {
   const proyectos = [
     {
       id: 1,
-      titulo: "E-Commerce React",
-      descripcion: "Tienda online completa con carrito de compras, autenticación y pasarela de pagos. Desarrollada con React, Node.js y MongoDB.",
-      imagen: "https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=E-Commerce+App",
-      tecnologias: ["React", "Node.js", "MongoDB", "Stripe"],
-      categoria: "fullstack",
-      github: "https://github.com/tuusuario/ecommerce-react",
-      demo: "https://ecommerce-demo.vercel.app"
+      titulo: "KikinSecurity",
+      descripcion: "Sistema de seguridad en desarrollo que implementa tecnologías modernas para protección y monitoreo. Proyecto en construcción con enfoque en seguridad digital.",
+      imagen: "/placeholder.svg?height=250&width=400",
+      tecnologias: ["JavaScript", "CSS", "HTML"],
+      categoria: "frontend",
+      github: "https://github.com/TMPixel/kikinsecurity",
+      demo: null // En construcción
     },
     {
       id: 2,
-      titulo: "Dashboard Analítico",
-      descripcion: "Panel de control interactivo con gráficos en tiempo real, filtros avanzados y exportación de datos. UI moderna y responsive.",
-      imagen: "https://via.placeholder.com/400x250/10B981/FFFFFF?text=Analytics+Dashboard",
-      tecnologias: ["React", "Chart.js", "Tailwind", "API"],
-      categoria: "react",
-      github: "https://github.com/tuusuario/analytics-dashboard",
-      demo: "https://dashboard-demo.vercel.app"
+      titulo: "Mercury",
+      descripcion: "Sistema de seguimiento de activos basado en códigos QR para propiedades institucionales (PCs, monitores, periféricos, etc.). Potenciado por una base de datos de alto rendimiento para gestión fluida y eficiente.",
+      imagen: "/placeholder.svg?height=250&width=400",
+      tecnologias: ["TypeScript", "JavaScript", "CSS", "Base de Datos"],
+      categoria: "fullstack",
+      github: "https://github.com/SebasTix02/Mercury",
+      demo: null
     },
     {
       id: 3,
-      titulo: "App de Tareas",
-      descripcion: "Aplicación de gestión de tareas con drag & drop, categorías, fechas límite y sincronización en la nube.",
-      imagen: "https://via.placeholder.com/400x250/8B5CF6/FFFFFF?text=Task+Manager",
-      tecnologias: ["React", "Firebase", "DnD Kit"],
-      categoria: "react",
-      github: "https://github.com/tuusuario/task-manager",
-      demo: "https://tasks-demo.vercel.app"
+      titulo: "AhorroFuturo",
+      descripcion: "Herramienta avanzada de simulación de créditos e inversiones con alta personalización. Permite ajustar tasas, plazos y divisiones de inversión para modelar resultados. Combina una interfaz elegante y fácil de usar con cálculos financieros robustos para planificación precisa.",
+      imagen: "https://github.com/ChrisitanLP/AhorroFuturo/blob/main/static/assets/img/Banners/first_banner.png?raw=true",
+      tecnologias: ["HTML5", "JavaScript", "Python", "CSS"],
+      categoria: "fullstack",
+      github: "https://github.com/ChrisitanLP/AhorroFuturo",
+      demo: null
     },
     {
       id: 4,
-      titulo: "Landing Page Corporativa",
-      descripcion: "Sitio web corporativo moderno con animaciones fluidas, formulario de contacto y optimización SEO completa.",
-      imagen: "https://via.placeholder.com/400x250/F59E0B/FFFFFF?text=Corporate+Website",
-      tecnologias: ["HTML", "CSS", "JavaScript", "GSAP"],
-      categoria: "frontend",
-      github: "https://github.com/tuusuario/corporate-website",
-      demo: "https://corporate-demo.vercel.app"
-    },
-    {
-      id: 5,
-      titulo: "API REST Blog",
-      descripcion: "API completa para un sistema de blog con autenticación JWT, CRUD de posts, comentarios y sistema de roles.",
-      imagen: "https://via.placeholder.com/400x250/EF4444/FFFFFF?text=Blog+API",
-      tecnologias: ["Node.js", "Express", "PostgreSQL", "JWT"],
+      titulo: "Facturaqua",
+      descripcion: "Sistema de facturación para emitir facturas de pago a los contribuyentes de la junta de agua potable en Santa Rosa. Solución completa para gestión de servicios públicos con interfaz intuitiva y funcionalidades administrativas.",
+      imagen: "https://github.com/Dionisio202/Junta_Agua/blob/main/public/img/Logo3@3x.png?raw=true",
+      tecnologias: ["PHP", "JavaScript", "HTML5", "CSS", "MySQL"],
       categoria: "fullstack",
-      github: "https://github.com/tuusuario/blog-api",
-      demo: "https://blog-api-docs.vercel.app"
-    },
-    {
-      id: 6,
-      titulo: "Calculadora Científica",
-      descripcion: "Calculadora avanzada con funciones científicas, historial de operaciones y modo programador.",
-      imagen: "https://via.placeholder.com/400x250/06B6D4/FFFFFF?text=Scientific+Calculator",
-      tecnologias: ["React", "Math.js", "CSS Grid"],
-      categoria: "react",
-      github: "https://github.com/tuusuario/scientific-calculator",
-      demo: "https://calculator-demo.vercel.app"
+      github: "https://github.com/Dionisio202/Junta_Agua",
+      demo: null
     }
   ];
 
-  const categorias = ['todos', 'react', 'fullstack', 'frontend'];
+  const categorias = ['todos', 'fullstack', 'frontend', 'backend'];
   
   const proyectosFiltrados = filtroActivo === 'todos' 
     ? proyectos 
@@ -93,7 +72,7 @@ const Portfolio = () => {
       {/* Imagen del Proyecto */}
       <div className="relative overflow-hidden">
         <img 
-          src={proyecto.imagen} 
+          src={proyecto.imagen || "/placeholder.svg"} 
           alt={proyecto.titulo}
           className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
         />
@@ -108,15 +87,17 @@ const Portfolio = () => {
               <FaGithub className="mr-2" />
               {textos.botones.github}
             </a>
-            <a 
-              href={proyecto.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors inline-flex items-center"
-            >
-              <FaExternalLinkAlt className="mr-2" />
-              {textos.botones.demo}
-            </a>
+            {proyecto.demo && (
+              <a 
+                href={proyecto.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-primary-600 transition-colors inline-flex items-center"
+              >
+                <FaExternalLinkAlt className="mr-2" />
+                {textos.botones.demo}
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -135,12 +116,21 @@ const Portfolio = () => {
           {proyecto.tecnologias.map((tech, index) => (
             <span 
               key={index}
-              className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium"
+              className="bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 px-3 py-1 rounded-full text-sm font-medium"
             >
               {tech}
             </span>
           ))}
         </div>
+        
+        {/* Estado del proyecto */}
+        {!proyecto.demo && (
+          <div className="mt-3">
+            <span className="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-3 py-1 rounded-full text-xs font-medium">
+              En desarrollo
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -161,7 +151,7 @@ const Portfolio = () => {
               onClick={() => setFiltroActivo(categoria)}
               className={`px-6 py-2 rounded-full font-semibold transition-all duration-200 ${
                 filtroActivo === categoria
-                  ? 'bg-blue-500 text-white shadow-lg transform scale-105'
+                  ? 'bg-primary-500 text-white shadow-lg transform scale-105'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
@@ -171,7 +161,7 @@ const Portfolio = () => {
         </div>
 
         {/* Grid de Proyectos */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {proyectosFiltrados.map((proyecto) => (
             <ProyectoCard key={proyecto.id} proyecto={proyecto} />
           ))}
@@ -185,6 +175,13 @@ const Portfolio = () => {
             </p>
           </div>
         )}
+
+        {/* Nota sobre proyectos en desarrollo */}
+        <div className="mt-12 text-center">
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
+            💡 Próximamente más proyectos...
+          </p>
+        </div>
       </div>
     </div>
   );

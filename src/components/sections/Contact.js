@@ -89,7 +89,7 @@ const Contact = () => {
 
   return (
     <div className="p-8 lg:p-12">
-      <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4">
             {textos.titulo}
@@ -99,7 +99,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8">
           {/* Formulario de Contacto */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
             <form onSubmit={handleSubmit} className="space-y-6">

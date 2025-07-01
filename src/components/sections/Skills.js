@@ -93,8 +93,8 @@ const Skills = () => {
 
   return (
     <div className="p-8 lg:p-12">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-12 text-center">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-3xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-12 text-center">
           {textos.titulo}
         </h1>
         
